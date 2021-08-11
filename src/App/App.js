@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Card } from "../Card/Card";
 import { ColorInput } from "../ColorInput/ColorInput";
 import "./App.css";
@@ -6,9 +6,9 @@ import "./App.css";
 export const App = () => {
   const [colors, setColors] = useState([]);
 
-  const addColor = (hexcolor) => {
-    setColors([...colors, hexcolor])
-  }
+  const addColor = useCallback((hexcolor) => {
+    setColors((prevColors) => [...prevColors, hexcolor])
+  }, [])
 
   return (
     <div className='AppContainer'>
@@ -19,5 +19,4 @@ export const App = () => {
       </div>     
     </div>  
   );
-  
 };
