@@ -1,0 +1,9 @@
+.AppContainer {
+  padding: 50px;
+}
+
+.ColorList {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}

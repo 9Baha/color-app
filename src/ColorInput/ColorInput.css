@@ -1,0 +1,22 @@
+.Input {
+  height: 80px;
+  width: 200px;
+  border: 0;
+  outline: 0;
+  background-color: #ededed;
+  font-size: 28px;
+  padding: 0px 20px;
+}
+
+.AddButton {
+  height: 80px;
+  display: block;
+  border: 0;
+  background-color: #da0037;
+  padding: 0px 25px;
+  font-size: 28px;
+}
+
+.ColorInputContainer {
+  display: flex;
+}
