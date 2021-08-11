@@ -18,9 +18,15 @@ export const ColorInput = (props) => {
     setValue("")
   }
 
+  const handleKeyPress = (event) => {
+    if (event.charCode === 13) {
+      handleClickButton()
+    }
+  }
+
   return (
     <div className='ColorInputContainer'>
-      <input className='Input' type="text" value={value} onChange={handleChange} />
+      <input className='Input' type="text" value={value} onChange={handleChange} onKeyPress={handleKeyPress} />
       <button className='AddButton' onClick={handleClickButton}>Add</button> 
     </div>
   );
